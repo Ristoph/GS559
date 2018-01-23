@@ -26,6 +26,8 @@ data_file2 = ''.join(data_file2)
 combined_data = (data_file1 + data_file2) # concatenate data strings from user supplied files
 combined_file.write(combined_data) # write newly combined string to previously created new file
 
+print 'Fasta concatenation complete!'
+
 file1.close() # close files
 file2.close()
 combined_file.close()
