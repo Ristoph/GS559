@@ -44,7 +44,7 @@ for x in green: # for each position in fluor trace
         base = 'N' # Base call can't be made
     sequence.append(base) # store called base to sequence list
     i += 1 # increase index to next position
-print "The DNA sequence is:" ''.join(sequence) # print result
+print "The DNA sequence is:", ''.join(sequence) # print result
 
 green_file.close() # close files
 red_file.close()
