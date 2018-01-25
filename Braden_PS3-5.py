@@ -13,3 +13,6 @@ for x in barcode_file: # for each line in barcode file
     sequence = sequence_file.readline() # retrieve the next line of sequence file
     if (x.strip() == barcode_user): # if user barcode matches supplied barcode stripped of leading/trailing characters
         print sequence # print the current line of sequence file
+
+barcode_file.close()
+sequence_file.close()
