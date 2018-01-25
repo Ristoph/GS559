@@ -16,3 +16,5 @@ for x in seq_file.readlines():
     missing = missing + x.count('-')
 
 print missing, 'missing bases detected.'
+
+seq_file.close()
