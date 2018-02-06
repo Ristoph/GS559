@@ -12,10 +12,6 @@ kmer_len = int(sys.argv[2])#I need to store the length of the kmer
 seq = list(str(seq_file.read())) # read in sequence file to list of bases and new line characters
 seq = list(val for val in seq if val != '\n')
 
-# seq.remove('\n') # take out new line characters
-
-# print seq[:280]
-
 kmer_lib = {} # make a library to store kmers
 seq_len = len(seq) # measure library length
 rem_seq = len(seq) # create a measure of remaining bases for sliding window
@@ -33,7 +29,15 @@ while rem_seq >= kmer_len: # so long as there are enough bases to make a kmer
         kmer_lib[kmer_now] = 1 # add current kmer to the library
     rem_seq -= 1 # reduce the count of remaining bases
 
-for val in kmer_lib.keys(): # print all entries in the kmer library and their counts in a stupid order
-    print val, kmer_lib[val]
+output_list = [] # initialize list to return values
+
+for val in kmer_lib.keys(): # copy library into list of two item lists
+    output_list.append([val, kmer_lib[val]])
+
+output_list.sort() # sort list alphabetically
+
+for kmer_count in output_list: # print output list line by line in readable format
+    kmer_count[1] = str(kmer_count[1])
+    print ' '.join(kmer_count)
 
 seq_file.close() # close opened file
