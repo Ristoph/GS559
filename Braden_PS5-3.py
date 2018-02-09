@@ -11,7 +11,7 @@ import sys
 
 def file_to_dict(file_name): # this function only makes dict's with files that have keys and values on alternating lines
     file = open(file_name, 'r')
-    file_elements = list(x[:-2] for x in file.readlines())
+    file_elements = list(x.strip() for x in file.readlines())
     file.close()
     new_dict = {}
     key_line = 0
