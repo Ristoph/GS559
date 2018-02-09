@@ -5,23 +5,28 @@
 
 def find_words_of_len(doc, word_len):
     word_index_dict = {}
-    word_list = []
-    word_index = 0
+    # word_list = []
+    # word_index = 0
     for doc_line in doc:
         doc_line = doc_line.strip()
         doc_line = doc_line.split(' ')
         for word in doc_line:
             if word != '':
-                word_list.append(word)
+                if len(word) >= word_len:
+                    if word in word_index_dict.keys():
+                        word_index_dict[word] = word_index_dict[word] + 1
+                    else:
+                        word_index_dict[word] = 1
+                # word_list.append(word)
             else:
                 continue
-    for word in word_list:
-        if len(word) >= word_len:
-            if word in word_index_dict.keys():
-                word_index_dict[word] = word_index_dict[word] + 1
-            else:
-                word_index_dict[word] = 1
-        word_index += 1
+    # for word in word_list:
+    #     if len(word) >= word_len:
+    #         if word in word_index_dict.keys():
+    #             word_index_dict[word] = word_index_dict[word] + 1
+    #         else:
+    #             word_index_dict[word] = 1
+    #     word_index += 1
     return(word_index_dict)
 
 def dict_max_value(dict):
