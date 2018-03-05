@@ -73,7 +73,6 @@ def matrix_product(matrix1_a, matrix2_a):
                     #print prod_matrix_row_el
                 prod_matrix_row.append(prod_matrix_row_el)
             prod_matrix.append(prod_matrix_row)
-
     else:
         return -1000
     return prod_matrix

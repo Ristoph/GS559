@@ -10,4 +10,8 @@ first_matrix = Braden_PS6_abpackage.get_matrix(sys.argv[1])
 second_matrix = Braden_PS6_abpackage.get_matrix(sys.argv[2])
 
 product_matrix = Braden_PS6_abpackage.matrix_product(first_matrix, second_matrix)
-print(Braden_PS6_abpackage.printable_matrix(product_matrix))
+
+if product_matrix == -1000:
+    print "Dimensional mismatch"
+else:
+    print(Braden_PS6_abpackage.printable_matrix(product_matrix))
