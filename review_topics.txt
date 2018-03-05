@@ -1,0 +1,40 @@
+From PS1:
+Blosum 62 exists, dynamic programming matrix for finding alignment
+fixed versus affine gap penalty
+
+From PS2:
+Smith-Waterman vs Needleman-Wunsch
+
+From PS3:
+P-values and null distributions
+multiple testing correction (Bonferroni)
+
+From PS4:
+Position-specific scoring matrix
+Dynamic programming matrix to construct null distributions
+
+From PS5:
+Phylogenetic trees - how many are poss for given number spp (rooted v unrooted)
+Jukes-Cantor distance (and corrected)
+UPGMA algorithm
+
+From PS6:
+Fitch's Algorithm (bottom up and top down phases)
+Small v large parsimony
+Branch and bound
+Heuristic: Hill climbing and other algorithms
+Nearest-Neighbor Interchange
+
+From PS7:
+Mysteries
+Euclidean and Manhattan distances
+dissimilarity matrix
+complete vs single linkage
+dendrogram
+
+From PS8:
+k-means
+centroid
+Dijkstra's algorithm
+
+
