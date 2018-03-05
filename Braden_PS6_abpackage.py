@@ -50,3 +50,30 @@ def matrix_add(matrix1_a, matrix2_a):
     else:
         return -1000
     return sum_matrix
+
+## 3d. (10 points) Write a program that takes two files each containing a matrix of integers, multiplies them using a
+## function, and then prints the result. Remember that matrix multiplication is only valid for a matrix of size NxM (N
+## rows, M columns) and one of size MxP (M rows, P columns), for any N, M, and P, and results in a matrix of size
+## NxP.
+
+# i is the index of rows
+# j is the index of column
+# m is the index of the shared dimension
+# to build rows with .append, I have to keep i constant first
+
+def matrix_product(matrix1_a, matrix2_a):
+    if len(matrix1_a[0]) == len(matrix2_a):
+        prod_matrix = []
+        for i in range(len(matrix1_a)):
+            prod_matrix_row = []
+            for j in range(len(matrix2_a[0])):
+                prod_matrix_row_el = 0
+                for m in range(len(matrix1_a[0])):
+                    prod_matrix_row_el += (matrix1_a[i][m] * matrix2_a[m][j])
+                    #print prod_matrix_row_el
+                prod_matrix_row.append(prod_matrix_row_el)
+            prod_matrix.append(prod_matrix_row)
+
+    else:
+        return -1000
+    return prod_matrix
